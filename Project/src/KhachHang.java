@@ -8,8 +8,8 @@ public class KhachHang  {
     protected KhachHang()  {
         this.MaKH=0;
         this.DonGia=0;
-        this.NgayHD=NgayHD;
-        this.HoTenKH=HoTenKH;
+        this.NgayHD="";
+        this.HoTenKH="";
         this.SoLuong=0;
     }
     protected KhachHang(int ma, double dgia, String ngay, String hoten, int sl, double ttien)  {
@@ -56,7 +56,17 @@ public class KhachHang  {
 
     protected void setThanhTien(double thanhTien) {   ThanhTien = thanhTien;  }
 
-    protected void nhap()  {   System.out.println("Nhap Ma Khach Hang: ");   MaKH = in.nextInt();   System.out.println("Ho va Ten Khach Hang: ");   HoTenKH = in.next();   System.out.println("Ngay Lap Hoa Don: ");   NgayHD = in.next();   System.out.println("So Luong(KW): ");   SoLuong = in.nextInt();   System.out.println("Don Gia: ");   DonGia = in.nextDouble();
+    protected void nhap()  {
+        System.out.println("Nhap Ma Khach Hang: ");
+        MaKH = in.nextInt();
+        System.out.println("Ho va Ten Khach Hang: ");
+        HoTenKH = in.next();
+        System.out.println("Ngay Lap Hoa Don: ");
+        NgayHD = in.next();
+        System.out.println("So Luong(KW): ");
+        SoLuong = in.nextInt();
+        System.out.println("Don Gia: ");
+        DonGia = in.nextDouble();
     }
     public String toString() {
         return "[MaKH: " + MaKH + ", HoTenKH: " + HoTenKH + ", NgayHD: " + NgayHD      + ", DonGia: " + DonGia + ", SoLuong: " +SoLuong;

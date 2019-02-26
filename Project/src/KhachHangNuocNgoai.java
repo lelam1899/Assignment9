@@ -1,5 +1,5 @@
 
-class KhachHangNuocNgoai extends KhachHang  {
+ public class  KhachHangNuocNgoai extends KhachHang  {
     private String QuocTich;
     public KhachHangNuocNgoai()
     {
@@ -27,7 +27,7 @@ class KhachHangNuocNgoai extends KhachHang  {
         return this.ThanhTien = this.SoLuong*this.DonGia;
     }
     public String toString()  {
-        return "Khach Hang Nuoc Ngoai: " + super.toString() + ", QuocTich: " + QuocTich     + ", ThanhTien: " + ThanhTien;
+        return  super.toString() + ", QuocTich: " + QuocTich     + ", ThanhTien: " + ThanhTien;
     }
 }
 

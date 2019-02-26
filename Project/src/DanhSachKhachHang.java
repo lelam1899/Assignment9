@@ -1,4 +1,6 @@
-public class DanhSachKhachHang{
+
+public class DanhSachKhachHang  {
+
     private KhachHang kh[] = new KhachHang[100];
     private int CountKH, sum1=0, sum2=0, dem=0, sumtien=0;
     public DanhSachKhachHang()  {
@@ -7,9 +9,9 @@ public class DanhSachKhachHang{
     }
     public void ThemKH(int temp)  {
         if(CountKH>100)
-            System.out.println("Bo Nho Da Day, ko the them!");
+            System.out.println("Bộ nhớ đầy, không thể thêm!");
         else   {
-            if(temp==1)    {
+            if(temp==1) {
                 kh[CountKH] = new KhachHangVietNam();
                 KhachHangVietNam khv = new KhachHangVietNam();
                 khv.nhap();
@@ -18,29 +20,29 @@ public class DanhSachKhachHang{
                 sum1+=khv.SoLuong;
             }    else    {
                 kh[CountKH] = new KhachHangNuocNgoai();
-            }
-            KhachHangNuocNgoai khnn = new KhachHangNuocNgoai();
-            khnn.nhap();
-            khnn.ThanhTien = khnn.TTien();
-            kh[CountKH] = khnn;
-            sum2 += khnn.SoLuong;
-            sumtien += khnn.ThanhTien;
-            dem++;
+                KhachHangNuocNgoai khnn = new KhachHangNuocNgoai();
+                khnn.nhap();
+                khnn.ThanhTien = khnn.TTien();
+                kh[CountKH] = khnn;
+                sum2 += khnn.SoLuong;
+                sumtien += khnn.ThanhTien;
+                dem++;
+            }    CountKH++;
         }
-        CountKH++;
     }
-        public void HienThiKH()  {
-    for(int i=0; i<CountKH; i++)   {
-        System.out.println("\nSo TT: " + (i+1));
-        System.out.println(kh[i].toString());
+    public void HienThiKH()  {
+        for(int i=0; i<CountKH; i++)   {
+            System.out.println("\nSo TT: " + (i+1));
+            System.out.println(kh[i].toString());
         }
     }
     public void TongSL()  {
-    System.out.println("==>> Tong So Luong(KW) Dien cua KH Viet Nam: " + sum1);
-    System.out.println("==>> Tong So Luong(KW) Dien cua KH Nuoc Ngoai: " + sum2);
-    }
+        System.out.println(":::->> Tong So Luong(KW) Dien cua KH Viet Nam: " + sum1);
+        System.out.println(":::->> Tong So Luong(KW) Dien cua KH Nuoc Ngoai: " + sum2);
 
+
+    }
     public void TrungBinh()  {
-    System.out.println("==>> Trung Binh Thanh Tien cua KH Nuoc Ngoai: " + (sumtien/dem));
+        System.out.println("|-->> Trung Binh Thanh Tien cua KH Nuoc Ngoai: " + (sumtien/dem));
     }
 }
